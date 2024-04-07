@@ -9,13 +9,13 @@ body
     height: 400px;   
     float: left;  
     border: 4px double black; 
-    background: #333; 
+    background: #111; 
     text-align: center;
 }
 
 .s,.p
 {
-    background-color: #444;
+    background-color: #111;
     text-align: center;
     color: white;   
 }
