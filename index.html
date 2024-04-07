@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body style="margin-top: 30px;">
+        
+    <div class="m">
+        <div class="s">
+            <br><br>
+            <h2>Калькулятор золотого сечения</h2>
+            <br><br>
+        </div>   
+
+
+
+            <div class="d">
+                <fieldset>
+                    <legend>Длинный отрезок</legend>
+                    <p>
+                        A= <input type="number" id="oa" >
+                 </p>
+              
+                 <input type="button" value="Вычислить B и A + B " onclick="fa()">  
+                 <br>
+                 <br>
+                 <div id="outb"></div>    
+                </fieldset>
+            </div>
+
+
+            <div class="d">
+                <fieldset>
+                    <legend>Короткий отрезок</legend>
+                    <p>
+                        B= <input type="number" id="ob" >
+                    </p>
+              
+                 <input type="button" value="Вычислить A и A + B " onclick="fb()">
+                 <br>
+                 <br>
+                 <div id="outa"></div>  
+                </fieldset>
+            </div>
+
+
+            <div class="d">
+                <fieldset>
+                    <legend>Сумма отрезков</legend>
+                    <p>
+                        A+B= <input type="number" id="oab" >
+                    </p>
+              
+                 <input type="button" value="Вычислить A и B " onclick="fab()">
+                 <br>
+                 <br>
+                 <div id="outab"></div> 
+                </fieldset>
+            </div>
+
+            <div class="d">
+                <fieldset>
+                    <legend>Теория</legend>
+                    <h3>
+                        Формула Золотого Сечения
+                    </h3>
+                  
+                    
+               
+                    Наш калькулятор Золотого сечения использует следующую формулу для определения пропущенных значений:
+                    <br>
+                    <br>    
+                    φ = A / B = (A + B) / A
+                    <br>
+                    <br>    
+                    φ = ( 1 + √5 ) / 2 = 
+                    <br>
+                    <br>
+                    1.6180339887498948482045868 ...
+                    <br>
+                </fieldset>
+            </div>
+            
+            <div class="p">
+                <br><br>
+                СОШ №2
+                <br><br> 
+                г. Вязьма
+                <br><br>
+                2024 г.
+                <br><br>
+            </div>
+    </div>
+        
+</body>
+</html>
+<script>
+    function fa()
+    {
+          let a=parseFloat(oa.value)
+          var f=(1+Math.sqrt(5))/2
+          let b=a/f
+          let ab=a+b
+          outb.innerHTML='B = '+b+'<br><br>A + B = '+ab        
+    }
+
+    function fb()
+    {
+          let b=parseFloat(ob.value)
+          var f=(1+Math.sqrt(5))/2
+          let a=b*f
+          let ab=a+b
+          outa.innerHTML='A = '+a+'<br><br>A + B = '+ab        
+    }
+
+    function fab()
+    {
+          let ab=parseFloat(oab.value)
+          var f=(1+Math.sqrt(5))/2
+          let a=ab/f
+          let b=ab-a
+          outab.innerHTML='A = '+a+'<br><br>B = '+b        
+    }
+</script>
