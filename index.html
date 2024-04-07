@@ -13,7 +13,8 @@
     <div class="m">
         <div class="s">
             <br><br>
-            <h2>Калькулятор золотого сечения</h2>
+            <img src="img/image015.png">
+            <h2 style="color: #ffff00;">  Калькулятор золотого сечения</h2>
             <br><br>
         </div>   
 
@@ -22,14 +23,19 @@
             <div class="d">
                 <fieldset>
                     <legend>Длинный отрезок</legend>
+                    <br>
+                    <br>
                     <p>
-                        A= <input type="number" id="oa" >
-                 </p>
+                        A= <input type="number" id="oa" style="padding: 7px;" >
+                    </p>
               
-                 <input type="button" value="Вычислить B и A + B " onclick="fa()">  
+                 <input type="button" value="Вычислить B и A + B " onclick="fa()" style="padding: 10px; width: 210px;" >  
                  <br>
                  <br>
-                 <div id="outb"></div>    
+                 <div id="outb"></div>  
+                 <br>
+                 <br>
+                 <img src="img/ab.png">  
                 </fieldset>
             </div>
 
@@ -37,14 +43,19 @@
             <div class="d">
                 <fieldset>
                     <legend>Короткий отрезок</legend>
+                    <br>
+                    <br>
                     <p>
-                        B= <input type="number" id="ob" >
+                        B= <input type="number" id="ob" style="padding: 7px;">
                     </p>
               
-                 <input type="button" value="Вычислить A и A + B " onclick="fb()">
+                 <input type="button" value="Вычислить A и C = A + B " onclick="fb()" style="padding: 10px; width: 200px;" >
                  <br>
                  <br>
                  <div id="outa"></div>  
+                 <br>
+                 <br>
+                 <img src="img/ab.png">
                 </fieldset>
             </div>
 
@@ -52,29 +63,34 @@
             <div class="d">
                 <fieldset>
                     <legend>Сумма отрезков</legend>
+                    <br>
+                    <br>
                     <p>
-                        A+B= <input type="number" id="oab" >
+                        A+B= <input type="number" id="oab" style="padding: 7px;" >
                     </p>
               
-                 <input type="button" value="Вычислить A и B " onclick="fab()">
+                 <input type="button" value="Вычислить A и B " onclick="fab()" style="padding: 10px; width: 220px;" >
                  <br>
                  <br>
                  <div id="outab"></div> 
+                 <br>
+                 <br>
+                 <img src="img/ab.png">
                 </fieldset>
             </div>
 
             <div class="d">
                 <fieldset>
                     <legend>Теория</legend>
-                    <h3>
-                        Формула Золотого Сечения
-                    </h3>
-                  
-                    
-               
-                    Наш калькулятор Золотого сечения использует следующую формулу для определения пропущенных значений:
                     <br>
-                    <br>    
+                    <br>
+                    <h3 style="color: #ffff00;">
+                        Формула Золотого Сечения
+                    </h3>        
+                    Калькулятор Золотого сечения использует следующие формулы для определения значений:
+                    <br>
+                    <br>  
+                    <p style="color: #ffff00;">  
                     φ = A / B = (A + B) / A
                     <br>
                     <br>    
@@ -82,12 +98,15 @@
                     <br>
                     <br>
                     1.6180339887498948482045868 ...
-                    <br>
+                    </p>
+                    <br>              
                 </fieldset>
             </div>
             
             <div class="p">
                 <br><br>
+                <img src="img/logo.png">
+                <br>
                 СОШ №2
                 <br><br> 
                 г. Вязьма
@@ -102,28 +121,49 @@
 <script>
     function fa()
     {
+        if  (oa.value!="")  
+          {    
           let a=parseFloat(oa.value)
           var f=(1+Math.sqrt(5))/2
           let b=a/f
           let ab=a+b
-          outb.innerHTML='B = '+b+'<br><br>A + B = '+ab        
+          outb.innerHTML='B = '+b+'<br><br>A + B = '+ab  
+          }    
+          else
+          {
+            alert("Введите значение A")
+          }       
     }
 
     function fb()
     {
-          let b=parseFloat(ob.value)
+        if  (ob.value!="")  
+          {    
+           let b=parseFloat(ob.value)
           var f=(1+Math.sqrt(5))/2
           let a=b*f
           let ab=a+b
-          outa.innerHTML='A = '+a+'<br><br>A + B = '+ab        
+          outa.innerHTML='A = '+a+'<br><br>A + B = '+ab  
+          }    
+          else
+          {
+            alert("Введите значение B")
+          }       
     }
 
     function fab()
     {
+        if  (oab.value!="")  
+          {    
           let ab=parseFloat(oab.value)
           var f=(1+Math.sqrt(5))/2
           let a=ab/f
           let b=ab-a
-          outab.innerHTML='A = '+a+'<br><br>B = '+b        
+          outab.innerHTML='A = '+a+'<br><br>B = '+b 
+          }    
+          else
+          {
+            alert("Введите значение A + B")
+          } 
     }
 </script>
