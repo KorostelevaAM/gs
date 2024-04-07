@@ -51,14 +51,14 @@
                     <legend>Длинный отрезок</legend>
                     <br>
                     <br>
-                    <p>
-                        A= <input type="number" id="oa" style="padding: 7px;" >
+                    <p style="color: #ffff00;">
+                        a= <input type="number" id="oa" style="padding: 7px; background-color: black; color: #ffff00;" >
                     </p>
               
-                 <input type="button" value="Вычислить B и A + B " onclick="fa()" style="padding: 10px; width: 210px;" >  
+                 <input type="button" value="Вычислить a и a + b " onclick="fa()" style="padding: 10px; width: 210px; background-color: #63560b; color: white;">  
                  <br>
                  <br>
-                 <div id="outb"></div>  
+                 <div id="outb" style="color: #ffff00;"></div>  
                  <br>
                  <br>
                  <img src="img/ab.png">  
@@ -71,14 +71,14 @@
                     <legend>Короткий отрезок</legend>
                     <br>
                     <br>
-                    <p>
-                        B= <input type="number" id="ob" style="padding: 7px;">
+                    <p style="color: #ffff00;">
+                        a= <input type="number" id="ob" style="padding: 7px; background-color: black; color: #ffff00;">
                     </p>
               
-                 <input type="button" value="Вычислить A и C = A + B " onclick="fb()" style="padding: 10px; width: 200px;" >
+                 <input type="button" value="Вычислить a и c = a + b " onclick="fb()" style="padding: 10px; width: 210px; background-color: #63560b; color: white;" >
                  <br>
                  <br>
-                 <div id="outa"></div>  
+                 <div id="outa" style="color: #ffff00;"></div>  
                  <br>
                  <br>
                  <img src="img/ab.png">
@@ -91,14 +91,14 @@
                     <legend>Сумма отрезков</legend>
                     <br>
                     <br>
-                    <p>
-                        A+B= <input type="number" id="oab" style="padding: 7px;" >
+                    <p style="color: #ffff00;">
+                        a+b= <input type="number" id="oab" style="padding: 7px; background-color: black; color: #ffff00;" >
                     </p>
               
-                 <input type="button" value="Вычислить A и B " onclick="fab()" style="padding: 10px; width: 220px;" >
+                 <input type="button" value="Вычислить a и b " onclick="fab()" style="padding: 10px; width: 220px; background-color: #63560b; color: white;" >
                  <br>
                  <br>
-                 <div id="outab"></div> 
+                 <div id="outab" style="color: #ffff00;"></div> 
                  <br>
                  <br>
                  <img src="img/ab.png">
@@ -107,7 +107,7 @@
 
            
             
-            <div class="p">
+            <div class="p" style="color: #ffff00;">
                 <br><br>
                 <img src="img/logo.png">
                 <br>
@@ -131,7 +131,7 @@
           var f=(1+Math.sqrt(5))/2
           let b=a/f
           let ab=a+b
-          outb.innerHTML='B = '+b+'<br><br>A + B = '+ab  
+          outb.innerHTML='a = '+b+'<br><br>a + b = '+ab  
           }    
           else
           {
@@ -147,7 +147,7 @@
           var f=(1+Math.sqrt(5))/2
           let a=b*f
           let ab=a+b
-          outa.innerHTML='A = '+a+'<br><br>A + B = '+ab  
+          outa.innerHTML='a = '+a+'<br><br>a + b = '+ab  
           }    
           else
           {
@@ -163,11 +163,11 @@
           var f=(1+Math.sqrt(5))/2
           let a=ab/f
           let b=ab-a
-          outab.innerHTML='A = '+a+'<br><br>B = '+b 
+          outab.innerHTML='a = '+a+'<br><br>b = '+b 
           }    
           else
           {
-            alert("Введите значение A + B")
+            alert("Введите значение a + b")
           } 
     }
 </script>
