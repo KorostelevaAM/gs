@@ -1,0 +1,72 @@
+body
+{
+    background-color: #222;
+}
+
+.d
+{
+    width: 300px;
+    height: 400px;   
+    float: left;  
+    border: 4px double black; 
+    background: #555; 
+    text-align: center;
+}
+
+.s,.p
+{
+    background-color: #444;
+    text-align: center;
+    color: white;   
+}
+.p
+{   
+    float: left;
+    width: 100%;
+}
+fieldset
+{
+    color: white;
+    height: 375px;
+}
+
+ @media (min-width: 308px) 
+{
+    .m
+    {
+    width: 308px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+@media (min-width:616px) 
+{
+    .m
+    {
+    width: 616px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+@media (min-width:924px) 
+{
+    .m
+    {
+    width: 924px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+@media (min-width:1232px) 
+{
+    .m
+    {
+    width: 1232px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
